@@ -1,13 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/406656c928.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+
+
 </head>
+
 <body>
-            sd
-            sd2d
+
+    <div class="container">
+
+        <section class="password-generator-box">
+
+            <div>
+                <h3 class="password-generator__heading">Password Generator</h3>
+            </div>
+
+
+            <div class="password-display-box">
+                <h2 class="display-box-text">Password</h2>
+                <button class='copy__btn'>
+                    <i class='far fa-clipboard'></i>
+                </button>
+            </div>
+
+
+            <div class='display-criteria'>
+                <label for='include-symbols'>Symbols</label>
+                <input type='checkbox' id='include-symbols' name='include-symbols' />
+            </div>
+
+
+            <div class='display-criteria'>
+                <label for='include-numbers'>Numbers</label>
+                <input type='checkbox' id='include-numbers' name='include-numbers' />
+            </div>
+
+
+            <div class="display-criteria">
+                <label for="password-length">Password Length</label>
+                <input type="number" min="10" max="20" name="password-length" id="password-length">
+            </div>
+
+            <div class='display-criteria'>
+                <label for='lowercase-letters'>Lowercase Letters</label>
+                <input type="checkbox" name="lowercase-letters" id="lowercase-letters" />
+            </div>
+
+            <div class='display-criteria'>
+                <label for='uppercase-letters'>Uppercase Letters</label>
+                <input type="checkbox" id='uppercase-letters' name='uppercase-letters' />
+            </div>
+
+            <button class="generate-button">Generate Password!</button>
+
+
+
+        </section>
+
+    </div>
+
+
+
 </body>
+
 </html>
+
+
+
+<!-- <div class='App'>
+    <div class='container'>
+        <div class='generator'>
+            <h2 class='generator__header'>Password Generator</h2>
+            <div class='generator__password'>
+                <h3>{password}</h3>
+                <button onClick={handleCopyPassword} class='copy__btn'>
+                    <i class='far fa-clipboard'></i>
+                </button>
+            </div>
+
+            <div class='form-group'>
+                <label for='password-strength'>Password length</label>
+                <input defaultValue={passwordLength} onChange={(e)=> setPasswordLength(e.target.value)}
+                type='number'
+                id='password-strength'
+                name='password-strength'
+                max='20'
+                min='10'
+                />
+            </div>
+
+            <div class='form-group'>
+                <label for='uppercase-letters'>Include Uppercase Letters</label>
+                <input checked={includeUppercase} onChange={(e)=> setIncludeUppercase(e.target.checked)}
+                type='checkbox'
+                id='uppercase-letters'
+                name='uppercase-letters'
+                />
+            </div>
+
+            <div class='form-group'>
+                <label for='lowercase-letters'>Include Lowercase Letters</label>
+                <input checked={includeLowercase} onChange={(e)=> setIncludeLowercase(e.target.checked)}
+                type='checkbox'
+                id='lowercase-letters'
+                name='lowercase-letters'
+                />
+            </div>
+
+            <div class='form-group'>
+                <label for='include-numbers'>Include Numbers</label>
+                <input checked={includeNumbers} onChange={(e)=> setIncludeNumbers(e.target.checked)}
+                type='checkbox'
+                id='include-numbers'
+                name='include-numbers'
+                />
+            </div>
+
+            <div class='form-group'>
+                <label for='include-symbols'>Include Symbols</label>
+                <input checked={includeSymbols} onChange={(e)=> setIncludeSymbols(e.target.checked)}
+                type='checkbox'
+                id='include-symbols'
+                name='include-symbols'
+                />
+            </div>
+
+            <button onClick={handleGeneratePassword} class='generator__btn'>
+                Generate Password
+            </button>
+            <ToastContainer position='top-center' autoClose={5000} hideProgressBar={false} newestOnTop={false}
+                closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover />
+        </div>
+    </div>
+</div>
+)
+} -->
